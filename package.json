@@ -1,45 +1,45 @@
 {
-  "name": "zetz-shop",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "type": "module",
-  "engines": {
-    "node": "14.15.3"
-  },
-  "scripts": {
-    "start": "node backend/server",
-    "server": "nodemon backend/server",
-    "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "data:import": "node backend/seeder",
-    "data:destroy": "node backend/seeder -d",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/obrm/zetz-shop.git"
-  },
-  "author": "Ori Baram",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/obrm/zetz-shop/issues"
-  },
-  "homepage": "https://github.com/obrm/zetz-shop#readme",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "colors": "^1.4.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-async-handler": "^1.1.4",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.15",
-    "morgan": "^1.10.0",
-    "multer": "^1.4.2",
-    "react-google-login": "^5.2.2"
-  },
-  "devDependencies": {
-    "concurrently": "^5.3.0",
-    "nodemon": "^2.0.7"
-  }
+	"name": "zetz-shop",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"type": "module",
+	"engines": {
+		"node": "14.15.3"
+	},
+	"scripts": {
+		"start": "node server",
+		"server": "nodemon server",
+		"client": "npm start --prefix frontend",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"data:import": "node seeder",
+		"data:destroy": "node seeder -d",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/obrm/zetz-shop.git"
+	},
+	"author": "Ori Baram",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/obrm/zetz-shop/issues"
+	},
+	"homepage": "https://github.com/obrm/zetz-shop#readme",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"colors": "^1.4.0",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"express-async-handler": "^1.1.4",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.11.15",
+		"morgan": "^1.10.0",
+		"multer": "^1.4.2",
+		"react-google-login": "^5.2.2"
+	},
+	"devDependencies": {
+		"concurrently": "^5.3.0",
+		"nodemon": "^2.0.7"
+	}
 }
